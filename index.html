@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>정보 입력</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      width: 250px;
+      margin-bottom: 20px;
+    }
+
+    .form-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 320px;
+    }
+
+    .form-box h1 {
+      text-align: center;
+      font-size: 17px;
+      margin-bottom: 3px;
+      color: #022cb6;
+    }
+
+    .form-box input,
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .form-box button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-box button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <img src="logo.png" alt="로고" class="logo">
+    <div class="form-box">
+      <form action="/submit" method="POST">
+        <h1>피해구제 내역 조회</h1>
+        <input type="text" name="name" placeholder="이름" required>
+        <input type="tel" name="phone" placeholder="전화번호" required>
+        <input type="text" name="code" placeholder="접수번호" required>
+        <button type="submit">제출</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
